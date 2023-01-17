@@ -21,9 +21,9 @@ def index():
     return render_template('index.html')
 @app.route('/predict', methods=['POST'])
 def predict():
-    Mean_Concave_Points = request.form['Mean_Concave_Points']
-    Worst_Perimeter = request.form['Worst_Perimeter']
-    Worst_Concave_Points = request.form['Worst_Concave_Points']
+    Mean_Concave_Points = request.form['mean_concave_points']
+    Worst_Perimeter = request.form['worst_perimeter']
+    Worst_Concave_Points = request.form['worst_concave_Points']
 
     
       
