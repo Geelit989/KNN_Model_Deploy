@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancer Classification</title>
+</head>
+<body>
+    <form action="{{ url_for('predict')}}" method="POST">
+        Mean-Concave-Points:  <input type="number" name="mean_concave_points"></br>
+        Worst_Perimeter:   <input type="number" name="worst_perimeter"></br>
+	Worst_Concave_Points:  <input type="number" name="worst_concave_points"></br>
+      
+        <input type=submit value=Submit>
+   </form>
+    Cancer prediction: {{ predict }}
+</body>
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
