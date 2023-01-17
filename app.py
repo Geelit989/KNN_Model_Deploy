@@ -21,13 +21,13 @@ def index():
     return render_template('index.html')
 @app.route('/predict', methods=['POST'])
 def predict():
-    Mean_Concave_Points = request.form['0']
-    Worst_Perimeter = request.form['1']
-    Worst_Concave_Points = request.form['2']
+    Mean_Concave_Points = request.form[0]
+    Worst_Perimeter = request.form[1]
+    Worst_Concave_Points = request.form[2]
 
     
       
-    pred = model.predict(np.array([['0', '1', '2']]))
+    pred = model.predict(np.array([[0,1,2]]))
     print(pred)
     return render_template('index.html', predict=str(pred))
 
