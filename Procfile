@@ -1,2 +1,2 @@
 
-web: Gunicon app:app
+web: gunicon app:app
