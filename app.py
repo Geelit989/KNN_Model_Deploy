@@ -21,13 +21,50 @@ def index():
     return render_template('index.html')
 @app.route('/predict', methods=['POST'])
 def predict():
-    Mean_Concave_Points = request.form['mean_concave_points']
-    Worst_Perimeter = request.form['worst_perimeter']
-    Worst_Concave_Points = request.form['worst_concave_points']
+    mean radius = request.form['mean radius']
+    mean_texture = request.form['mean_texture']
+    mean perimeter = request.form['mean perimeter']
+    mean area = request.form['mean area']
+    mean smoothness = request.form['mean smoothness']
+    mean compactness = request.form['mean compactness']
+    mean concavity = request.form['mean concavity']
+    mean concave points = request.form['mean concave points']
+    mean symmetry = request.form['mean symmetry']
+    mean fractal dimension = request.form['mean fractal dimension']
+    radius error = request.form['radius error']
+    texture error = request.form['texture error']
+    perimeter error = request.form['perimeter error']
+    area error = request.form['area error']
+    smoothness error = request.form['smoothness error']
+    compactness error = request.form['compactness error']
+    concavity error = request.form['concavity error']
+    concave points error = request.form['concave points error']
+    symmetry error = request.form['symmetry error']
+    fractal dimension error = request.form['fractal dimension error']
+    worst radius = request.form['worst radius']
+    worst texture = request.form['worst texture']
+    worst perimeter = request.form['worst perimeter']
+    worst area = request.form['worst area']
+    worst smoothness = request.form['worst smoothness']
+    worst compactness = request.form['worst compactness']
+    worst concavity = request.form['worst concavity']
+    worst concave points = request.form['worst concave points']
+    worst symmetry = request.form['worst symmetry']
+    worst fractal dimension = request.form['worst fractal dimension']
+    
+    
 
     
       
-    pred = model.predict(np.array([[mean_concave_points, worst_perimeter, worse_concave_points]]))
+    pred = model.predict(np.array([[mean radius, mean texture, mean perimeter, mean area,
+       mean smoothness, mean compactness, mean concavity,
+       mean concave points, mean symmetry, mean fractal dimension,
+       radius error, texture error, perimeter error, area error,
+       smoothness error, compactness error, concavity error,
+       concave points error, symmetry error, fractal dimension error,
+       worst radius, worst texture, worst perimeter, worst area,
+       worst smoothness, worst compactness, worst concavity,
+       worst concave points, worst symmetry, worst fractal dimension]]))
     print(pred)
     return render_template('index.html', predict=str(pred))
 
