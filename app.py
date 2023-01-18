@@ -27,7 +27,7 @@ def predict():
 
     
       
-    pred = model.predict(np.array([[0,1,2]]))
+    pred = model.predict(np.array([[Mean_Concave_Points, Worst_Perimeter, Worst_Concave_Points]]))
     print(pred)
     return render_template('index.html', predict=str(pred))
 
