@@ -7,10 +7,36 @@
 </head>
 <body>
     <form action="{{ url_for('predict')}}" method="POST">
-        Mean-Concave-Points:  <input type="number" name="mean_concave_points"></br>
-        Worst_Perimeter:   <input type="number" name="worst_perimeter"></br>
-	Worst_Concave_Points:  <input type="number" name="worst_concave_points"></br>
-      
+        mean radius:  <input type="number" name="mean radius"></br>
+        mean texture:   <input type="number" name="mean texture"></br>
+	mean perimeter:  <input type="number" name="mean perimeter"></br>
+	mean area:  <input type="number" name="mean area"></br>
+        mean smoothness:   <input type="number" name="mean smoothness"></br>
+	mean compactness:  <input type="number" name="mean compactness"></br>
+	mean concavity:  <input type="number" name="mean concavity"></br>
+        mean concave points:   <input type="number" name="worst_perimeter"></br>
+	mean symmetry:  <input type="number" name="mean symmetry"></br>
+	mean fractal dimension:  <input type="number" name="mean fractal dimension"></br>
+        radius error:   <input type="number" name="radius error"></br>
+	texture error:  <input type="number" name="texture error"></br>
+	perimeter error:  <input type="number" name="perimeter error"></br>
+        area error:   <input type="number" name="area error"></br>
+	smoothness error:  <input type="number" name="smoothness error"></br>
+        compactness error:  <input type="number" name="compactness error"></br>
+        concavity error:   <input type="number" name="concavity error"></br>
+	concave points error:  <input type="number" name="concave points error"></br>
+	symmetry error:  <input type="number" name="symmetry error"></br>
+        fractal dimension error:   <input type="number" name="fractal dimension error"></br>
+	worst radius:  <input type="number" name="worst radius"></br>
+	worst texture:  <input type="number" name="worst texture"></br>
+        worst perimeter:   <input type="number" name="worst perimeter"></br>
+	worst area:  <input type="number" name="worst area"></br>
+	worst smoothness:  <input type="number" name="worst smoothness"></br>
+        worst compactness:   <input type="number" name="worst compactness"></br>
+	worst concavity:  <input type="number" name="worst concavity"></br>
+	worst concave points:  <input type="number" name="worst concave points"></br>
+        worst symmetry:   <input type="number" name="worst symmetry"></br>
+	worst fractal dimension  <input type="number" name="worst fractal dimension"></br>
         <input type=submit value=Submit>
    </form>
     Cancer prediction: {{ predict }}
