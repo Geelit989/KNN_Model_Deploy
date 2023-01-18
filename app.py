@@ -65,8 +65,8 @@ def predict():
        worst_radius, worst_texture, worst_perimeter, worst_area,
        worst_smoothness, worst_compactness, worst_concavity,
        worst_concave_points, worst_symmetry, worst_fractal_dimension]]))
-       print(pred)
-       return render_template('index.html', predict=str(pred))
+    print(pred)
+    return render_template('index.html', predict=str(pred))
 
 
 if __name__ == '__main__':
